@@ -1,0 +1,4 @@
+autobears
+=========
+
+automatic telebears registration
