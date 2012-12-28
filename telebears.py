@@ -14,9 +14,6 @@ class telebears:
         self.br.set_handle_refresh(False)
         
     def login(self):
-        user = raw_input('username: ')
-        password = getpass('password: ')
-        authenticator = auth.authenticator(self.br) 
-        authenticator.authenticate('https://telebears.berkley.edu', user, password)
-        
+        auther = auth.authenticator(self.br) 
+        auther.prompt()
     

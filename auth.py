@@ -5,7 +5,12 @@ class authenticator:
     def __init__(self, browser):
         self.br = browser
 
-    def authenticate(self, target, user, password):
+    def prompt(self):
+        user = raw_input('username: ')
+        password = getpass('password: ')
+        self.auth('https://telebears.berkley.edu', user, password)
+        
+    def auth(self, target, user, password):
         try:
             self.br.open('https://auth.berkeley.edu/cas/login?service=%s'%target)
             self.br.select_form(nr=0)
