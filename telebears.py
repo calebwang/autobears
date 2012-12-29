@@ -51,10 +51,47 @@ class telebears:
             link = self.br.find_link(text_regex=self.sem_dict[self.sem] + ' ' + str(self.year)) 
             self.br.follow_link(link)
 
-    def add_class(self, ccn, for_grade = True, units = None, code = None):
+    def add_class(self, ccn, dl, for_grade = True, units = None, code = None):
+        """
+        Parameters
+        ---------
+            ccn:
+                course control number
+                five digit string or int e.g. 12345
+            dl:
+                pick discussion, lab
+                tuple e.g. (12346, 12347)
+                or (12346, None) if no lab or lab/discussion grouped together
+                or (None, 12347) if no discussion
+            for_grade:
+                is the class for a grade?
+            units:
+                for variable unit classes
+            code:
+                class entry code
+        """
+
         self.semester_home()
         link = self.br.find_link(text = 'Add Class')
         self.br.follow_link(link)
+        self.handle_class_dialogue(ccn, for_grade, units, code)
+        self.handle_discussion_dialogue(dl[0])
+        self.handle_lab_dialogue(dl[1])
+        self.confirm()
+
+    def waitlist(self, ccn, dl, for_grade = True, units = None, code = None)
+        """
+        see docstring for add_class 
+        """
+        self.semester_home()
+        link = self.br.find_link(text = 'Add Class')
+        self.br.follow_link(link)
+        self.handle_class_dialogue(ccn, for_grade, units, code)
+        self.handle_discussion_dialogue(dl[0])
+        self.handle_lab_dialogue(dl[1])
+        self.confirm()
+
+    def handle_class_dialogue(self, ccn, for_grade, units, code)
         self.br.select_form(nr=0)
         self.br['_InField1'] = str(ccn)
         if not for_grade:
@@ -64,10 +101,30 @@ class telebears:
         if code:
             self.br['_InField4'] = str(code)
         self.br.submit()
-        #need to handle discussion selection
-        self.confirm()
+
+    def handle_discussion_dialogue(self, section):
+        if not section:
+            return
+        self.br.select_form(nr=0)
+        #stuff goes here 
+        self.br.submit() 
+
+    def handle_lab_dialogue(self, section):
+        if not section:
+            return
+        self.br.select_form(nr=0)
+        #stuff goes here
+        self.br.submit()
 
     def switch_sections(self, lec_ccn, sec_ccn):
+        """
+        Parameters
+        ---------
+            lec_ccn:
+                ccn of lecture
+            sec_ccn:
+                ccn of section you want to switch into
+        """
         self.semester_home()
         link = self.br.find_link(text = 'Switch Sections')
         self.br.follow_link(link)
