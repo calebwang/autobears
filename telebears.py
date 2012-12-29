@@ -18,7 +18,7 @@ class telebears:
         
     def login(self):
         auther = auth.authenticator(self.br) 
-        auther.prompt()
+        auther.prompt('https://telebears.berkeley.edu')
  
     def logout(self):
         self.home()
