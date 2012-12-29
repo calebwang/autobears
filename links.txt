@@ -1,18 +1,61 @@
-Telebears Home
+Navigation
 -------------
 
-Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://www.berkeley.edu', text='University of California, Berkeley', tag='a', attrs=[('href', 'http://www.berkeley.edu'), ('target', '_blank')])
-Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://sis.berkeley.edu/bearfacts', text='Bear Facts', tag='a', attrs=[('href', 'http://sis.berkeley.edu/bearfacts'), ('target', '_blank')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home', text='Home', tag='a', attrs=[('href', '/telebears/home')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/enrollment', text='Spring 2013', tag='a', attrs=[('href', '/telebears/enrollment')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/summer', text='Summer 2012', tag='a', attrs=[('href', '/telebears/summer')])
-Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/contacts.jsp', text='Contact', tag='a', attrs=[('href', '/telebears/contacts.jsp')])
-Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/login/logout.jsp', text='Logout', tag='a', attrs=[('href', '/telebears/login/logout.jsp')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=student_profile', text='Student Profile', tag='a', attrs=[('href', '/telebears/home?action=student_profile')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=telebears_appointment', text='Tele-BEARS Appointment', tag='a', attrs=[('href', '/telebears/home?action=telebears_appointment')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=registration_blocks', text='Registration Blocks', tag='a', attrs=[('href', '/telebears/home?action=registration_blocks')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=cancel_registration', text='Cancel Registration', tag='a', attrs=[('href', '/telebears/home?action=cancel_registration')])
-Link(base_url='https://telebears.berkeley.edu/telebears/home', url='https://myfinaid.berkeley.edu', text='MyFinaid', tag='a', attrs=[('href', 'https://myfinaid.berkeley.edu'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/login/logout.jsp', text='Logout', tag='a', attrs=[('href', '/telebears/login/logout.jsp')])
+
+Registration (semester page)
+----------------------------
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=class_calendar', text='Class Calendar', tag='a', attrs=[('href', '/telebears/enrollment?action=class_calendar')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=class_list', text='Class List', tag='a', attrs=[('href', '/telebears/enrollment?action=class_list')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=add_class', text='Add Class', tag='a', attrs=[('href', '/telebears/enrollment?action=add_class')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=change_units', text='Change Units', tag='a', attrs=[('href', '/telebears/enrollment?action=change_units')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=switch_sections', text='Switch Sections', tag='a', attrs=[('href', '/telebears/enrollment?action=switch_sections')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=wait_list', text='Add to Wait List', tag='a', attrs=[('href', '/telebears/enrollment?action=wait_list')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=change_grade_option', text='Change Grade Option', tag='a', attrs=[('href', '/telebears/enrollment?action=change_grade_option')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=drop_class', text='Drop Class', tag='a', attrs=[('href', '/telebears/enrollment?action=drop_class')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=class_time_location', text='Time and Location', tag='a', attrs=[('href', '/telebears/enrollment?action=class_time_location')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=class_restrictions', text='Restrictions', tag='a', attrs=[('href', '/telebears/enrollment?action=class_restrictions')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=open_sections', text='Open Sections', tag='a', attrs=[('href', '/telebears/enrollment?action=open_sections')])
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=enroll_waitlist', text='Enroll/Waitlist', tag='a', attrs=[('href', '/telebears/enrollment?action=enroll_waitlist')])
+
+Add Class Forms
+------------
+<FIND POST https://telebears.berkeley.edu/telebears/enrollment application/x-www-form-urlencoded
+  <TextControl(_InField1=)>
+  <SelectControl(_InField2=[*1, 2])>
+  <TextControl(_InField3=)>
+  <TextControl(_InField4=)>
+  <SubmitControl(<None>=Continue) (readonly)>>
+<FIND POST https://telebears.berkeley.edu/telebears/enrollment application/x-www-form-urlencoded
+  <HiddenControl(_InField1=00000) (readonly)>
+  <HiddenControl(_InField2=1) (readonly)>
+  <HiddenControl(_InField3=  ) (readonly)>
+  <HiddenControl(_InField4=     ) (readonly)>
+  <SubmitControl(<None>=Cancel) (readonly)>>
+
+Switch section form
+-------------------
+<FIND POST https://telebears.berkeley.edu/telebears/enrollment application/x-www-form-urlencoded
+  <TextControl(_InField=)>
+  <SubmitControl(<None>=Submit) (readonly)>>
+<FIND POST https://telebears.berkeley.edu/telebears/enrollment application/x-www-form-urlencoded
+  <HiddenControl(_InField=00000) (readonly)>
+  <SubmitControl(<None>=Cancel) (readonly)>>
+
+
+Useless (Navigational)
+------
+Link(base_url='https://telebears.berkeley.edu/telebears/enrollment', url='/telebears/enrollment?action=rc_ac', text='R&C or A/C', tag='a', attrs=[('href', '/telebears/enrollment?action=rc_ac')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://www.berkeley.edu', text='University of California, Berkeley', tag='a', attrs=[('href', 'http://www.berkeley.edu'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://sis.berkeley.edu/bearfacts', text='Bear Facts', tag='a', attrs=[('href', 'http://sis.berkeley.edu/bearfacts'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/contacts.jsp', text='Contact', tag='a', attrs=[('href', '/telebears/contacts.jsp')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=transcript', text='Transcript', tag='a', attrs=[('href', '/telebears/home?action=transcript'), ('target', '_blank')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='mailto:orreg@berkeley.edu?subject=Tele-BEARS%20Feedback', text='Feedback', tag='a', attrs=[('href', 'mailto:orreg@berkeley.edu?subject=Tele-BEARS Feedback')])
 Link(base_url='https://telebears.berkeley.edu/telebears/home', url='mailto:orreg@berkeley.edu?subject=Report%20a%20Problem%20with%20Tele-BEARS', text='Report a Problem', tag='a', attrs=[('href', 'mailto:orreg@berkeley.edu?subject=Report a Problem with Tele-BEARS')])
