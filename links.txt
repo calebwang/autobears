@@ -1,0 +1,24 @@
+Telebears Home
+-------------
+
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://www.berkeley.edu', text='University of California, Berkeley', tag='a', attrs=[('href', 'http://www.berkeley.edu'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://sis.berkeley.edu/bearfacts', text='Bear Facts', tag='a', attrs=[('href', 'http://sis.berkeley.edu/bearfacts'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home', text='Home', tag='a', attrs=[('href', '/telebears/home')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/enrollment', text='Spring 2013', tag='a', attrs=[('href', '/telebears/enrollment')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/summer', text='Summer 2012', tag='a', attrs=[('href', '/telebears/summer')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/contacts.jsp', text='Contact', tag='a', attrs=[('href', '/telebears/contacts.jsp')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/login/logout.jsp', text='Logout', tag='a', attrs=[('href', '/telebears/login/logout.jsp')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=student_profile', text='Student Profile', tag='a', attrs=[('href', '/telebears/home?action=student_profile')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=telebears_appointment', text='Tele-BEARS Appointment', tag='a', attrs=[('href', '/telebears/home?action=telebears_appointment')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=registration_blocks', text='Registration Blocks', tag='a', attrs=[('href', '/telebears/home?action=registration_blocks')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=cancel_registration', text='Cancel Registration', tag='a', attrs=[('href', '/telebears/home?action=cancel_registration')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='https://myfinaid.berkeley.edu', text='MyFinaid', tag='a', attrs=[('href', 'https://myfinaid.berkeley.edu'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='/telebears/home?action=transcript', text='Transcript', tag='a', attrs=[('href', '/telebears/home?action=transcript'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='mailto:orreg@berkeley.edu?subject=Tele-BEARS%20Feedback', text='Feedback', tag='a', attrs=[('href', 'mailto:orreg@berkeley.edu?subject=Tele-BEARS Feedback')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='mailto:orreg@berkeley.edu?subject=Report%20a%20Problem%20with%20Tele-BEARS', text='Report a Problem', tag='a', attrs=[('href', 'mailto:orreg@berkeley.edu?subject=Report a Problem with Tele-BEARS')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://registrar.berkeley.edu/StudentSystems/tbinfo.html', text='Instructions', tag='a', attrs=[('href', 'http://registrar.berkeley.edu/StudentSystems/tbinfo.html'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://schedule.berkeley.edu', text='Schedule of Classes', tag='a', attrs=[('href', 'http://schedule.berkeley.edu'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='https://schedulebuilder.berkeley.edu', text='ScheduleBuilder', tag='a', attrs=[('href', 'https://schedulebuilder.berkeley.edu'), ('target', '_blank')])
+Link(base_url='https://telebears.berkeley.edu/telebears/home', url='http://bearfacts.berkeley.edu/', text='Bear Facts', tag='a', attrs=[('href', 'http://bearfacts.berkeley.edu/'), ('target', '_new')])
+
+

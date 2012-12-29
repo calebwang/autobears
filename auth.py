@@ -1,5 +1,5 @@
 import re
-from mechanize import Browser
+from getpass import getpass
 
 class authenticator:
     def __init__(self, browser):
