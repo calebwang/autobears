@@ -3,7 +3,14 @@
 import mechanize
 import auth
 
-class telebears:
+class RegistrationError(Exception):
+    def __init__(self, value = ''):
+        self.value = value
+
+    def __str__(self):
+        return str(self.value)
+
+class Telebears:
 
     def __init__(self):
         self.br = mechanize.Browser(factory = mechanize.RobustFactory())
@@ -101,6 +108,8 @@ class telebears:
         if code:
             self.br['_InField4'] = str(code)
         self.br.submit()
+        if not self.check_success():
+            raise RegistrationError("Error")
 
     def handle_discussion_dialogue(self, section):
         if not section:
@@ -108,6 +117,8 @@ class telebears:
         self.br.select_form(nr=0)
         #stuff goes here 
         self.br.submit() 
+        if not self.check_success():
+            raise RegistrationError("Error")
 
     def handle_lab_dialogue(self, section):
         if not section:
@@ -115,6 +126,8 @@ class telebears:
         self.br.select_form(nr=0)
         #stuff goes here
         self.br.submit()
+        if not self.check_success():
+            raise RegistrationError("Error")
 
     def switch_sections(self, lec_ccn, sec_ccn):
         """
@@ -134,6 +147,10 @@ class telebears:
         self.br['_InField'] = str(sec_ccn)
         self.br.submit()
         self.confirm()
+
+    def check_success(self):
+        """regex for error messages"""
+        return False
 
     def confirm(self):
         self.br.select_form(nr=0)
